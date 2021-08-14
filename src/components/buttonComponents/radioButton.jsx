@@ -1,12 +1,13 @@
 import React from 'react';
 
-function RadioButton() {
+function RadioButton({text, ...others}) {
     return (
-        <div>
-            <p>Selecione seu sexo:</p>
-            <p className="float">Masculino<input type="radio" name="sex" /><br /></p>
-            <p className="float">Feminino<input type="radio" name="sex" /></p>
-        </div>
+        <p>
+            <input
+                type="radio"
+                {...others}
+            />{text}
+        </p>
     );
 }
 

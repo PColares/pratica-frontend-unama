@@ -15,27 +15,40 @@ body {
 }
 
 .grid-parent {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.item-a {
-  grid-column-start: 1;
-  grid-column-end: 1;
+.container {
+  text-align: center;
+  /* border: 1px solid rgba(252, 252, 252, 0.4);
+  height: 770px; 
+  border-radius: 3px;
+  width: 400px; */
 }
 
-.item-b {
-  grid-column-start: 2;
-  grid-column-end: 2;
+.container p {
+  color: orange;
 }
 
+.container h1 {
+  font-size: 40px;
+  font-weight: 200;
+  margin: 0;
+}
+
+.container label {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
 .container2 {
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
   border-radius: 3px;
   width: 370px;
   height: 270px;
-  display: inline-block;
-  margin-top: 87px;
 }
 
 .container2 p {
@@ -45,46 +58,40 @@ body {
   padding: 10px;
 }
 
-.container {
-  margin: 10px auto;
-  padding: 80px 0;
-  text-align: center;
+select {
+  margin-top: 15px;
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  border-radius: 3px;
+  color: white;
 }
 
-.container h1 {
-  font-size: 40px;
-  font-weight: 200;
+option {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: #50a3a2;
+  color: white;
 }
 
 input {
+  display: block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
   width: 250px;
   border-radius: 3px;
-  font-family: "Source Sans Pro", sans-serif;
   padding: 10px 15px;
   margin: 0 auto 10px auto;
-  display: block;
   text-align: center;
-  font-size: 18px;
+}
+
+.container .genero {
   color: white;
-  font-weight: 300;
 }
 
-button {
-  appearance: none;
-  outline: 0;
-  background-color: white;
-  border: 0;
-  padding: 10px 15px;
-  color: #50a3a2;
-  border-radius: 3px;
-  width: 220px;
-  font-size: 18px;
-  margin: 10px 50px;
+.radio {
+  margin: 0;
 }
 
-.float {
-  padding: 0 0;
-  float: left;
-}
