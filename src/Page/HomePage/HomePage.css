@@ -1,3 +1,4 @@
+/* ELEMENT SELECTOR */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,84 +15,188 @@ body {
   height: 100%;
 }
 
-.grid-parent {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.container {
-  text-align: center;
-  /* border: 1px solid rgba(252, 252, 252, 0.4);
-  height: 770px; 
-  border-radius: 3px;
-  width: 400px; */
-}
-
-.container p {
-  color: orange;
-}
-
-.container h1 {
-  font-size: 40px;
-  font-weight: 200;
-  margin: 0;
-}
-
-.container label {
-  font-size: 18px;
-  color: white;
+label {
   font-weight: bold;
-}
-.container2 {
-  border: 1px solid rgba(252, 252, 252, 0.4);
-  background-color: rgba(252, 252, 252, 0.2);
-  border-radius: 3px;
-  width: 370px;
-  height: 270px;
-}
-
-.container2 p {
-  text-align: left;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
-}
-
-select {
-  margin-top: 15px;
-  border: 1px solid rgba(252, 252, 252, 0.4);
-  background-color: rgba(252, 252, 252, 0.2);
-  border-radius: 3px;
-  color: white;
-}
-
-option {
-  border: 1px solid rgba(252, 252, 252, 0.4);
-  background-color: #50a3a2;
-  color: white;
+  font-size: 16px;
 }
 
 input {
   display: block;
+
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   color: white;
   font-weight: 300;
+
+  border-radius: 3px;
   border: 1px solid rgba(252, 252, 252, 0.4);
   background-color: rgba(252, 252, 252, 0.2);
-  width: 250px;
-  border-radius: 3px;
-  padding: 10px 15px;
-  margin: 0 auto 10px auto;
+  /* width: 200px; */
+  /* margin-top: 15px; */
+  /* margin-bottom: 15px; */
+  margin: 5px 0;
+  padding: 2px 15px;
+  /* margin: 0 auto 10px auto; */
   text-align: center;
+  position: relative;
 }
 
-.container .genero {
+button {
+  appearance: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  width: 180px;
+  margin: 25px 0 0 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.5s;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: whitesmoke;
+  color: #50a3a2;
+  outline: 0;
+  border: 0;
+  border-radius: 6px;
+}
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+button span:after {
+  content: "👉";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+button:hover span {
+  padding-right: 35px;
+}
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+select {
+  border: 2px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 3px 3px;
+  color: white;
+}
+option {
+  font-weight: bold;
+  background-color: #50a3a2;
+  color: white;
+}
+/* CLASS SELECTORS */
+/* FLEX CONTENT */
+.flex-parent {
+  display: flex;
+}
+
+.item-a {
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-left: 50px;
+}
+/* FLEX TELEFONE */
+.tipos-telefone {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+  height: 30px;
+  width: 400px;
+  margin-top: 2px;
+}
+.tipos {
+  margin-top: 5px;
+  margin-right: 40px;
+}
+.tipos-telefone .telefone {
+  margin-left: 0px;
+  margin-right: 70px;
+}
+/* FLEX GENERO NASCIMENTO */
+.genero-nasc {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+  height: 100px;
+  width: 400px;
+  margin-top: 30px;
+}
+
+.genero input {
+  margin-top: 10px;
+}
+
+.nasc {
+  margin-bottom: 100px;
+  margin-left: 38px;
+  margin-right: 70px;
+}
+
+/* DISPLAY CONTAINER */
+.item-b {
+  width: 400px;
+  max-height: 390px;
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  border-radius: 3px;
+  margin-top: 50px;
+}
+
+.item-b p {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 40px;
+}
+
+.item-b span {
+  padding-left: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+.radio input {
+  display: inline;
+}
+
+.error {
+  color: orange;
+}
+/* AWFUL MISTAKES */
+
+/* .item-c {
+  width: 300px;
+  height: 200px;
+  margin-top: 15px;
+}
+
+.item-c p {
   color: white;
 }
 
-.radio {
-  margin: 0;
+ .item-c select {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.2);
+  border-radius: 3px;
+  color: white;
+  padding: 5px 5px;
 }
 
+.item-c option {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: #50a3a2;
+  color: white;
+} */

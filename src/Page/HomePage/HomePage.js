@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import InputForm from '../../components/InputComponents/inputComponent';
 import validate from "../../components/validation/ValidateInfo";
 import RadioButton from "../../components/buttonComponents/radioButton";
-import "./HomePage3.css";
+import "./HomePage.css";
 
 function App() {
   const [genderValue, setGenderValue] = useState("");
