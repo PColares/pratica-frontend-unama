@@ -1,12 +1,12 @@
 import React from "react";
-
-const name = "Pedro Colares";
-const date = new Date().getFullYear();
+import '../../settings/pt-br';
+import ptBr from "../../settings/pt-br";
 
 function Footer() {
+  const date = new Date().getFullYear();
   return (
     <div className="footer">
-      <p>Desenvolvido por {name}.</p>
+      <p>Desenvolvido por {ptBr.developerNameLabel}.</p>
       <p>{date}</p>
     </div>
   );

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import InputForm from '../Input/inputComponent';
 import validate from "../../components/validation/ValidateInfo";
 import RadioButton from "../button/radioButton";
-import SelectForm from "../button/selectForm";
 import DisplayInput from "../Display/displayComponent";
+import ptBr from '../../settings/pt-br';
 import './form.css'
 
 function FormComponent() {
@@ -17,7 +17,7 @@ function FormComponent() {
         telefone: "",
         cpf: "",
         nascimento: "",
-        tipo: "Celular"
+        tipo: "Celular",
     }
     );
 
@@ -42,7 +42,8 @@ function FormComponent() {
                     <InputForm
                         id="E-mail"
                         error={errors.email}
-                        textLabel="E-mail *"
+                        textLabel={ptBr.inputEmailLabel}
+                        placeholder={ptBr.inputEmailPlaceholder}
                         name="email"
                         onChange={handleChange}
                         value={contact.email}
@@ -51,7 +52,8 @@ function FormComponent() {
                     <InputForm
                         id="E-mail"
                         error={errors.confirmEmail}
-                        textLabel="Confirmar E-mail *"
+                        textLabel={ptBr.inputConfirmEmailLabel}
+                        placeholder={ptBr.inputConfirmEmailPlaceholder}
                         name="confirmEmail"
                         onChange={handleChange}
                         value={contact.confirmEmail}
@@ -60,7 +62,8 @@ function FormComponent() {
                     <InputForm
                         id="Primeiro Nome"
                         error={errors.fName}
-                        textLabel="Nome *"
+                        textLabel={ptBr.inputNameLabel}
+                        placeholder={ptBr.inputNamePlaceholder}
                         name="fName"
                         onChange={handleChange}
                         value={contact.fName}
@@ -69,7 +72,8 @@ function FormComponent() {
                     <InputForm
                         id="Sobrenome"
                         error={errors.lName}
-                        textLabel="Sobrenome *"
+                        textLabel={ptBr.inputLastNameLabel}
+                        placeholder={ptBr.inputLastNamePlaceholder}
                         name="lName"
                         onChange={handleChange}
                         value={contact.lName}
@@ -78,7 +82,7 @@ function FormComponent() {
                     <InputForm
                         id="cpf"
                         error={errors.cpf}
-                        textLabel="CPF *"
+                        textLabel={ptBr.inputCpfLabel}
                         name="cpf"
                         onChange={handleChange}
                         value={contact.cpf}
@@ -87,18 +91,17 @@ function FormComponent() {
                         placeholder="___.___.___-__"
                     />
                     {/* Seção TELEFONE */}
-                    <label for="telefone">Telefone</label>
+                    <label for="telefone">{ptBr.inputPhoneLabel}</label>
                     <div className="tipos-telefone">
                         <div className="tipos">
-                            <SelectForm
-                                onChange={handleChange}
-                                name="tipo"
+                            <select
                                 id="telefone"
-                                option="Celular"
-                                optionText="Celular"
-                                option2="Fixo"
-                                optionText2="Fixo"
-                            />
+                                name="tipo"
+                                onChange={handleChange}
+                            >
+                                <option value="Celular">{ptBr.selectOptionLabel}</option>
+                                <option value="Fixo">{ptBr.selectOption2Label}</option>
+                            </select>
                         </div>
                         <div className="telefone">
                             <InputForm
@@ -115,22 +118,22 @@ function FormComponent() {
                     {/* Seção GÊNERO */}
                     <div className="genero-nasc">
                         <div className="genero">
-                            <label for="Gênero">Gênero</label>
+                            <label for="Gênero">{ptBr.inputGenderLabel}</label>
                             <div className="radio">
                                 <RadioButton
-                                    text="Masculino"
+                                    text={ptBr.inputMaleLabel}
                                     value="Masculino"
                                     onChange={(e) => setGenderValue("Masculino")} checked={genderValue === "Masculino"}
                                     name="gender"
                                 />
                                 <RadioButton
-                                    text="Feminino"
+                                    text={ptBr.inputFemaleLabel}
                                     value="Feminino"
                                     onChange={(e) => setGenderValue("Feminino")} checked={genderValue === "Feminino"}
                                     name="gender"
                                 />
                                 <RadioButton
-                                    text="Outros"
+                                    text={ptBr.inputOthersLabel}
                                     value="Outros"
                                     onChange={(e) => setGenderValue("Outros")} checked={genderValue === "Outros"}
                                     name="gender"
@@ -139,7 +142,7 @@ function FormComponent() {
                         </div>
                         <div className="nasc" >
                             <InputForm
-                                textLabel="Data de nascimento *"
+                                textLabel={ptBr.inputBirthdayLabel}
                                 id="nascimento"
                                 error={errors.nascimento}
                                 onChange={handleChange}
@@ -152,7 +155,7 @@ function FormComponent() {
                             />
                         </div>
                     </div>
-                    <button class="button" ><span>Concluir</span></button>
+                    <button class="button" ><span>{ptBr.buttonLabel}</span></button>
                 </form>
             </div>
             <div className="item-b">

@@ -1,0 +1,22 @@
+const ptBr = {
+    inputNameLabel:"Nome",
+    inputNamePlaceholder: "Bram",
+    inputLastNameLabel:"Sobrenome",
+    inputLastNamePlaceholder: "Stoker",
+    inputEmailLabel: "Email",
+    inputEmailPlaceholder: "email@email.com",
+    inputConfirmEmailLabel: "Confirme Email",
+    inputConfirmEmailPlaceholder: "email@email.com",
+    inputCpfLabel: "CPF",
+    inputPhoneLabel: "Telefone",
+    inputGenderLabel: "Gênero",
+    inputMaleLabel: "Masculino",
+    inputFemaleLabel:"Feminino",
+    inputOthersLabel:"Outros",
+    inputBirthdayLabel: "Data de Nascimento",
+    selectOptionLabel: "Celular",
+    selectOption2Label: "Fixo",
+    buttonLabel:"Concluir",
+    developerNameLabel:"Pedro Colares",
+}
+export default ptBr;
