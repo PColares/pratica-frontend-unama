@@ -1,8 +1,8 @@
 import React from 'react';
-function DisplayInput({ title, content }) {
+function DisplayInput({ title, content, tipo }) {
     return (
         <>
-            <p>{title}</p>
+            <p>{title}{tipo}</p>
             <span>{content}</span>
         </>
     );
