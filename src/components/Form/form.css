@@ -186,9 +186,12 @@ option {
 .error {
   color: orange;
 }
+.error-parent{
+  border: unset;
+}
 
-.border input {
-  border: 1px solid red;
+.error-parent .border {
+  border: 1.5px solid darkorange;
 }
 
 /* AWFUL MISTAKES */

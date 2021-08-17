@@ -27,6 +27,7 @@ function FormComponent() {
             ...contact,
             [name]: value
         })
+        console.log(contact);
     }
 
     function handleSubmit(event) {
@@ -89,14 +90,15 @@ function FormComponent() {
                     <label for="telefone">Telefone</label>
                     <div className="tipos-telefone">
                         <div className="tipos">
-                            {/* <SelectForm onChange={handleChange} tipo={contact.tipo} text="Celular" tipo2={contact.tipo} text2="Fixo" /> */}
-                            <select
-                                name="tipo"
+                            <SelectForm
                                 onChange={handleChange}
-                                id="telefone">
-                                <option value="Celular">Celular</option>
-                                <option value="Fixo">Fixo</option>
-                            </select>
+                                name="tipo"
+                                id="telefone"
+                                option="Celular"
+                                optionText="Celular"
+                                option2="Fixo"
+                                optionText2="Fixo"
+                            />
                         </div>
                         <div className="telefone">
                             <InputForm
@@ -156,22 +158,10 @@ function FormComponent() {
             <div className="item-b">
                 <DisplayInput title="E-mail" content={contact.email === contact.confirmEmail && contact.email} />
                 <DisplayInput title="Nome Completo" content={contact.fName !== "" && contact.lName !== "" ? contact.fName + " " + contact.lName : null} />
-
-
-                {/* <DisplayInput title="Telefone - " tipo={contact.tipo}  content={contact.telefone} /> */}
-
-                <p>Telefone - {contact.tipo}</p>
-                <span> {contact.telefone} </span>
-
-                <p>Cpf</p>
-                <span>{errors.cpf === undefined ? contact.cpf : null}</span>
-
-                <p>Data de Nascimento</p>
-
-                <span>{errors.nascimento === undefined ? contact.nascimento : null}</span>
-
-                <p>Gênero</p>
-                <span>{genderValue}</span>
+                <DisplayInput title="Telefone - " tipo={contact.tipo} content={contact.telefone} />
+                <DisplayInput title="CPF" content={errors.cpf === undefined ? contact.cpf : null} />
+                <DisplayInput title="Data de Nascimento" content={errors.nascimento === undefined ? contact.nascimento : null} />
+                <DisplayInput title="Gênero" content={genderValue} />
             </div>
         </div>
     )

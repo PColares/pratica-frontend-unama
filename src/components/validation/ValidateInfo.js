@@ -36,37 +36,36 @@ function validateInfo(values) {
 
   if (UserDate > maxYearRange) {
     errors.nascimento = "Data muito antiga";
-  } else if (UserDate < yearRange) {
+  }
+  if (UserDate < yearRange) {
     errors.nascimento = "Data muito recente";
-  } else if (!values.nascimento) {
+  }
+  if (!values.nascimento) {
     errors.nascimento = 'Campo obrigatório';
-  } else if (invalidDates.find((s) => s === values.nascimento)) {
+  }
+  if (invalidDates.find((s) => s === values.nascimento)) {
     errors.nascimento = 'Data inválida'
   }
-
-
   if (!values.fName) {
     errors.fName = 'Campo obrigatório';
-  } else if (!values.lName) {
+  }
+  if (!values.lName) {
     errors.lName = 'Campo obrigatório';
-  } else if (!values.cpf) {
+  }
+  if (!values.cpf) {
     errors.cpf = 'Campo obrigatório'
-  } else if (invalidNumbers.find((s) => s === values.cpf)) {
+  }
+  if (invalidNumbers.find((s) => s === values.cpf)) {
     errors.cpf = 'CPF inválido'
   }
-
-
   if (!values.telefone) {
     errors.telefone = 'Campo obrigatório'
   }
-
-
   if (!values.email) {
     errors.email = 'Campo obrigatório';
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
     errors.email = 'Informe um e-mail válido';
   }
-
   if (!values.confirmEmail) {
     errors.confirmEmail = 'Campo obrigatório';
   } else if (values.confirmEmail !== values.email) {

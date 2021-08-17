@@ -1,6 +1,6 @@
 import React from 'react'
 
-function OptionForm({ tipo }) {
-    return <option value={tipo}>{tipo}</option>
+function OptionForm({ value, text, ...others}) {
+    return <option value={value}>{text}</option>
 }
 export default OptionForm;

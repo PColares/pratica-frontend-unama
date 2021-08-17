@@ -1,15 +1,13 @@
 import React from 'react';
-// import OptionForm from './optionForm';
+import OptionForm from './optionForm';
 
-function SelectForm({tipo,text,text2, tipo2}) {
+function SelectForm({option, option2, optionText, optionText2}) {
     return (
         <select
             name="tipo"
             id="telefone">
-            {/* <OptionForm tipo="Celular"/>
-            <OptionForm tipo="Fixo"/> */}
-            <option value={tipo}>{text}</option>
-            <option value={tipo2}>{text2}</option>
+            <OptionForm value={option} text={optionText} />
+            <OptionForm value={option2} text={optionText2} />
         </select>
     );
 }
